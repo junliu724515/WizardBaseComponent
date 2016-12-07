@@ -8,9 +8,9 @@ Attributes:
    steps -- the string array to define multiple steps
 
 Events:
-   newStepEvent -- move the steps in Wizard
-   cancelEvent -- event emitted when wizard being cancelled
-   finishEvent -- event emitted when wizard being finished
+   newStepEvent -- move the steps in Wizard,
+   cancelEvent -- event emitted when wizard being cancelled,
+   finishEvent -- event emitted when wizard being finished,
 
 
 Usage: using four steps as the example( see more in LightingWizardProcessTestApp in the repo)
