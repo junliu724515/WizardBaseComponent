@@ -4,6 +4,11 @@ A Base lightning component for Wizard using LDS
 
 Demo: http://bit.ly/2g8iJFM
 
+<a href="https://githubsfdeploy.herokuapp.com?owner=junliu724515&repo=WizardBaseComponent">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
+</a>
+
 Attributes:
    steps -- the string array to define multiple steps
 
