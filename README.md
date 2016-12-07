@@ -6,6 +6,7 @@ Demo: http://bit.ly/2g8iJFM
 
 Attributes:
    steps -- the string array to define multiple steps
+
 Events:
    newStepEvent -- move the steps in Wizard
    cancelEvent -- event emitted when wizard being cancelled
