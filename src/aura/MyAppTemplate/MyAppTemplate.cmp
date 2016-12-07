@@ -1,0 +1,10 @@
+<aura:component isTemplate="true" access="GLOBAL" extends="aura:template">
+    
+    <aura:set attribute="title" value="A test app with grey background"/>
+    <aura:set attribute="loadingText" value="Woohoo! this is cool!!"/>
+    <style>
+        html{
+          background-color: rgb(244, 246, 249);
+        }
+    </style>
+</aura:component>

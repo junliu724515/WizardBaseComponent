@@ -1,0 +1,60 @@
+<aura:component >
+    <!--a component method to be called by the container component to set the step-->
+    <aura:method name="setStep" action="{!c.doSetStep}" access="global" />
+    <!--current step showing-->
+    <aura:attribute name="currentStep" type="Integer" default="0"/>
+    <!--all steps dynamically defined and passed in-->
+    <aura:attribute name="steps" type="String[]" />
+    <!--the process bar show percentage-->
+    <aura:attribute name="progressPercentage" type="Integer" default="0"/>
+    <!--the facet attribute to render buttons in docked footer-->
+    <aura:attribute name="buttons" type="Aura.Component[]" />
+    <!--the event to move steps-->
+    <aura:registerEvent name="newStepEvent" type="c:NewStepEvent"/>
+    <!--the cancel event-->
+    <aura:registerEvent name="cancelEvent" type="c:WizardCancelEvent"/>
+    <!--the finish event-->
+    <aura:registerEvent name="finishEvent" type="c:WizardFinishEvent"/>
+ 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!--lighning spinner base component-->
+    <div aura:id="spinner">
+        <lightning:spinner variant="brand" size="medium"/>
+    </div>
+    
+    <!--Wizard html-->
+    <div class="slds-wizard" role="navigation">
+        <ol class="slds-wizard__list">
+            <aura:iteration items="{!v.steps}" var="step">
+                <li aura:id="step" class="slds-wizard__item">
+                    <a href="javascript:void(0);" class="slds-wizard__link">
+                        <span class="slds-wizard__marker"></span>
+                        <span class="slds-wizard__label slds-text-title--caps slds-truncate" title="{!step}">{!step}</span>
+                    </a>
+                </li>
+            </aura:iteration>
+        </ol>
+        <span class="slds-wizard__progress">
+            <span  aura:id="progressBar" class="slds-wizard__progress-bar" style="{!'width:'+v.progressPercentage+'%;'}"></span>
+        </span>
+    </div>
+    
+    
+    <div class="slds-panel slds-m-top--x-large">
+        <div class="slds-panel__section">
+            <!--page content of multiple steps set in the container component-->
+            {!v.body}
+        </div>
+    </div>
+    
+    <!--buttons-->
+    <div class="slds-docked-form-footer">     
+        <div class="slds-button-group" role="group">     
+            <!--use facets to dynamically create buttons-->
+            {!v.buttons}
+        </div>
+    </div> 
+    
+</aura:component>
