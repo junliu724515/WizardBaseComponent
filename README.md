@@ -2,12 +2,13 @@
 
 A Base lightning component for Wizard using LDS
 
-Demo: http://bit.ly/2g8iJFM
-
 <a href="https://githubsfdeploy.herokuapp.com?owner=junliu724515&repo=WizardBaseComponent">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
+
+once you install it into your org. open LightingWizardProcessTestApp in the developer console, and click on preview button to see the component.
+
 
 Attributes:
    steps -- the string array to define multiple steps
