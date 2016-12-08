@@ -2,8 +2,12 @@
 *.sublime-settings
 *.sublime-workspace
 .DS_Store
+.idea
 **/.DS_Store
 **/.manifest
 config
 metadata
+IlluminatedCloud
+WizardBaseComponent.iml
+
 
