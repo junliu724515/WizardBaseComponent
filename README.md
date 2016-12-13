@@ -7,6 +7,8 @@ A Base lightning component for Wizard using LDS
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
 
+![screenshot](images/wizard.PNG)
+
 once you install it into your org. open LightingWizardProcessTestApp in the developer console, and click on preview button to see the component.
 
 
